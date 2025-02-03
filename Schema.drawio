@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.10">
+  <diagram name="Stránka-1" id="qWKEgChxF-kw6nZREivj">
+    <mxGraphModel dx="1562" dy="846" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-5" value="Frontend" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-13" value="&lt;div&gt;Leaflet.js, GeoRaster&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-5">
+          <mxGeometry x="10" y="70" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-14" value="JavaScript" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-5">
+          <mxGeometry x="10" y="40" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-15" value="&lt;div&gt;Fetch API&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-5">
+          <mxGeometry x="10" y="100" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-16" value="Filtering" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-5">
+          <mxGeometry x="10" y="130" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-35" value="&lt;div&gt;Visualization&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-5">
+          <mxGeometry x="10" y="160" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-6" value="Backend" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="40" y="430" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-8" value="&lt;div&gt;FastAPI, Uvicorn&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-6">
+          <mxGeometry x="10" y="70" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-9" value="Python" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-6">
+          <mxGeometry x="10" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-10" value="&lt;div align=&quot;left&quot;&gt;Data downloading&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-6">
+          <mxGeometry x="10" y="100" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-11" value="Serving processed images" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-6">
+          <mxGeometry x="10" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-12" value="Image processing" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-6">
+          <mxGeometry x="10" y="130" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-17" value="&lt;div&gt;Copernicus OData API&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-18" value="&lt;div align=&quot;left&quot;&gt;OData&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-17">
+          <mxGeometry x="10" y="40" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-19" value="Metadata of products" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-17">
+          <mxGeometry x="10" y="70" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-20" value="Copernicus Dataspace S3 paths" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-17">
+          <mxGeometry x="10" y="100" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-23" value="&lt;div&gt;Requests filtered&lt;/div&gt;&lt;div&gt;datasets&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="OG06wduU4ZcLOUjCHP_V-5" target="OG06wduU4ZcLOUjCHP_V-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="200" as="sourcePoint" />
+            <mxPoint x="440" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-24" value="&lt;div&gt;Returns metadata&lt;/div&gt;&lt;div&gt;information&lt;br&gt;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="240" as="sourcePoint" />
+            <mxPoint x="240" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-25" value="&lt;div&gt;Requests metadata&lt;/div&gt;&lt;div&gt;with dataspace&lt;/div&gt;&lt;div&gt;S3 storage path&lt;br&gt;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="OG06wduU4ZcLOUjCHP_V-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="480" as="sourcePoint" />
+            <mxPoint x="540" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="480" />
+              <mxPoint x="320" y="360" />
+              <mxPoint x="450" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-27" value="&lt;div&gt;Copernicus Dataspace&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="430" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-30" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-27">
+          <mxGeometry x="60" y="61.67" width="80" height="106.67" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-31" value="S3 Storage" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="OG06wduU4ZcLOUjCHP_V-27">
+          <mxGeometry x="70" y="109.99999999999999" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-28" value="Requests S3 path" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OG06wduU4ZcLOUjCHP_V-6" target="OG06wduU4ZcLOUjCHP_V-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="480" as="sourcePoint" />
+            <mxPoint x="400" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-29" value="&lt;div&gt;Sends data from&lt;/div&gt;&lt;div&gt;S3 storage&lt;br&gt;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="OG06wduU4ZcLOUjCHP_V-27" target="OG06wduU4ZcLOUjCHP_V-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="560" as="sourcePoint" />
+            <mxPoint x="240" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-32" value="Requests&lt;br&gt;visualization" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="OG06wduU4ZcLOUjCHP_V-5" target="OG06wduU4ZcLOUjCHP_V-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="320" as="sourcePoint" />
+            <mxPoint x="140" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OG06wduU4ZcLOUjCHP_V-33" value="Servers processed&lt;br&gt;&lt;div&gt;data&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="OG06wduU4ZcLOUjCHP_V-6" target="OG06wduU4ZcLOUjCHP_V-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="420" as="sourcePoint" />
+            <mxPoint x="440" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
