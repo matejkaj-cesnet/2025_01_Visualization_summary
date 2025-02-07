@@ -43,17 +43,22 @@ The entire workflow guides the user from the initial area selection and over tim
 
 Backend of the project focuses on downloading and processing of the desired product thus converting it into map-visualizable image data. It is programmed in Python and uses the FastAPI framework with the Uvicorn server to communicate with the frontend. Data is downloaded from the S3 storage using the Boto3 library.
 
-**//todo přidat něco o zpracování snímků od multimedií**
+Downloaded data is then processed using the [gjtiff tool](https://github.com/MartinPulec/gjtiff) which relies heavily on CUDA-capable NVidia GPUs utilising [GPUJPEG](https://github.com/CESNET/GPUJPEG) developed by CESNET, [nvTIFF](https://developer.nvidia.com/nvtiff-downloads) and [nvJPEG2000](https://developer.nvidia.com/nvjpeg2000-downloads) libraries. The goal of the gjtiff tool is to convert downloaded product image data no matter how they are formatted into standard 8-bit JPEG image which could be then displayed directly in the web browser. The idea behind gjtiff is that all data processing is undertaken on the GPU and the data should be completely processed in up to 1s on a common gaming GPU.
 
 ### Key features
 
 - **Modular design:** The code follows a modular paradigm. This allows for the simple addition of other product types or different methods of storing processed data.
 - **Request processing:** API endpoints are exposed to request image visualizations for specific products. These endpoints validate requests and simultaneously store and process them.
 - **Data retrieval:** Application connects to the external Copernicus Dataspace storage using the Copernicus OData API to obtain metadata and S3 paths corresponding to the requested products. From there, it queries and downloads the corresponding datasets stored in the Copernicus S3 storage. For the area of the Czech Republic, the possibility of using a Czech national relay is being explored.    
-- **Image processing:** Based on the type of product, the downloaded files are filtered and processed for further visualization. **//todo tady je potřeba něco od multimedií**
+- **Image processing:** Based on the type of product, the downloaded files are filtered and processed for further visualization. The processing is undertaken using the following steps:
+  - Decoding: GRD products are decoded using nvTIFF and [nvCOMP](https://developer.nvidia.com/nvcomp-download) for DEFLATE decompress as GRD products are further losslessly compressed. SLC products decoding falls back on CPU using the libTIFF library as SLC product data are formatted as complex integers (which is not supported with nvTIFF). Sentinel 2 products are all stored in the JPEG2000 format where the decoding is straightforwardly done through nvJPEG2000.
+  - The image data are then euqalized in the same way as [Sentinel Application Platform (SNAP)](https://earth.esa.int/eogateway/tools/snap) does.
+  - The image data could be downscaled based on users input. The idea is that the visualisation component could serve as a quick preview tool so that the users could quickly and visually select datasets for further processing using e.g., SNAP. Scaling is performed using [NVIDIA Performance Primitives (NPP)](https://developer.nvidia.com/npp).
+  - The image data is then rotated to follow a natural orientation (i.e., north on top and west and east on right and left respectively). The rotation is implemented using the NVIDIA Performance Primitives again.
+  - Resulting image is then compressed into 8-bit JPEG image using the GPUJPEG compression. The compression is limited to a size of 8 GB for the uncompressed image resulting from a previous processing stage. Larger images are further downscaled to fit under this limit. Such a limit is highly practical as the GPU memory is quite scarce resource, GPUJPEG compression is rather memory heavy and we need to limit the whole process to fit completely only into the GPU memory (otherwise the image processing would be slowed down considerably). 
 
 ### Workflow
 
 1. **Requesting visualization:** The frontend requests visualization through the endpoint `/api/request_visualization`. Each request is processed asynchronously in the background using the functionality of the `BackgroundTask` framework of FastAPI.
 2. **Downloading data:** The request is validated, then the Copernicus Dataspace API is called, and the path to the Copernicus S3 storage is obtained. From there, the data is downloaded into a temporary folder in the backend server's storage.
-3. **Processing data:** **//todo multimedia**
+3. **Processing data:** The data is then processed using the gjtiff tool. Resulting JPEG image is saved on the backend server and URI pointing to the processed image is returned to the fronted and further served to the user.
