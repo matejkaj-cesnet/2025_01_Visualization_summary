@@ -37,7 +37,7 @@ The entire workflow guides the user from the initial area selection and over tim
 3. **Selecting the area of interest:** The area of interest is defined by a bounding box and its north-west and south-east coordinates. These are automatically filled in at the time of the map initialization. The user can change the coordinates manually by moving the map and pressing the corresponding button or by writing these coordinates into designated fields.
 4. **Filtering parameters:** In the current version, products of Sentinel-1 as well as Sentinel-2 missions can be searched. Filters are available for both missions. ![Available Sentinel-1 Filters](./02_Sentinel_1_Filters.png) ![Available Sentinel-2 Filters](./03_Sentinel_2_Filters.png)
 5. **Loading available products:** Data are loaded from the Copernicus OData API. Filtered datasets are inserted into the corresponding `<select>` list. When a product is selected, the area covered by that product is displayed on the map using a polygon. ![Frontend GUI with polygon](./04_Frontend_GUI_with_polygon.png)
-6. **Visualizing data:** The data of the selected product can be visualized by pressing the `Visualize selected feature` button. Pressing this button invokes an API call with the ID of selected product to the backend, which begins to process it. **//todo bylo by fajn sem přidat nějaký obrázek**
+6. **Visualizing data:** The data of the selected product can be visualized by pressing the `Visualize selected feature` button. Pressing this button invokes an API call with the ID of selected product to the backend, which begins to process it.
 
 ## Backend executive summary
 
